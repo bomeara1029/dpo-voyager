@@ -17,3 +17,6 @@ docs/resources/
 *.log
 .DS_Store
 secrets.env
+
+# FORK
+storage/*

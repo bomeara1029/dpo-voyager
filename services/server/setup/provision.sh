@@ -11,6 +11,8 @@ apt-get install -y vim wget curl bzip2 git
 # Install build essentials (required for NPM package compilation)
 apt-get install -y build-essential libssl-dev python
 
+git config --global --add safe.directory /app
+
 # Install NVM (node version manager)
 cd ~
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
@@ -20,9 +22,9 @@ export NVM_DIR="/root/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # install node.js
-nvm install 12.13.1
-nvm use 12.13.1
-nvm alias default 12.13.1
+nvm install 16
+nvm use 16
+nvm alias default 16
 
 # update npm
 npm i -g npm
